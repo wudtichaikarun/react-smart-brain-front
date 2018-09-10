@@ -1,5 +1,6 @@
 # SmartBrain - v2
-Final project for Udemy course
+
+ref: [juniior to senior web developer](https://www.udemy.com/the-complete-junior-to-senior-web-developer-roadmap/)
 
 1. Clone this repo
 2. Run `npm install`
