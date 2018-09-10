@@ -27,15 +27,17 @@ const initialState = {
   input: '',
   imageUrl: '',
   boxes: [],
-  route: 'home',
-  isSignedIn: true,
+  route: 'signin',
+  isSignedIn: false,
   isProfileOpen: false,
   user: {
     id: '',
-    name: '',
+    name: 'romantic',
     email: '',
     entries: 0,
-    joined: ''
+    joined: '',
+    pet: '',
+    age: ''
   }
 };
 
@@ -140,7 +142,8 @@ class App extends Component {
       imageUrl,
       route,
       boxes,
-      isProfileOpen
+      isProfileOpen,
+      user
     } = this.state;
     return (
       <div className="App">
@@ -159,6 +162,8 @@ class App extends Component {
             <Profile
               isProfileOpen={isProfileOpen}
               toggleModal={this.toggleModal}
+              loadUser={this.loadUser}
+              user={user}
             />
           </Modal>
         )}
