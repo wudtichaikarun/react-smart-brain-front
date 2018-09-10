@@ -51,7 +51,9 @@ class ProfileIcon extends React.Component {
               marginTop: '20px',
               backgroundColor: 'rgba(255,255,255,0.5)'
             }}>
-            <DropdownItem>View Pfofile</DropdownItem>
+            <DropdownItem onClick={this.props.toggleModal}>
+              View Pfofile
+            </DropdownItem>
             <DropdownItem
               onClick={() =>
                 this.props.onRouteChange('signout')
