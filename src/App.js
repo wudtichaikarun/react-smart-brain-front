@@ -173,6 +173,9 @@ class App extends Component {
 
   onRouteChange = route => {
     if (route === 'signout') {
+      // delete jwt from windown session
+      window.sessionStorage.removeItem('token');
+
       return this.setState(initialState);
     } else if (route === 'home') {
       this.setState({ isSignedIn: true });
